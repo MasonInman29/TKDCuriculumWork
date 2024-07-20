@@ -7,18 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="Mason Inman" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Technique - Tables</title>
 
-    <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
-    <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -41,8 +39,8 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+             <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -50,20 +48,21 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-            
-                  <!-- Nav Item - Tables -->
-            <li class="nav-item">
+
+            <!-- Nav Item - Ranks -->
+            <li class="nav-item active">
                 <a class="nav-link" href="ranks.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Ranks</span></a>
             </li>
-            <!-- Nav Item - Tables -->
+
+            <!-- Nav Item - Lookup -->
             <li class="nav-item">
                 <a class="nav-link" href="techniqueTables.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Technique Lookup</span></a>
             </li>
-
+            
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -85,10 +84,11 @@
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
+                    <form class="form-inline">
+                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </form>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -276,155 +276,296 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                    </div>
-                        
-                    <!-- Content Row -->
-                    <div class="row">
+                    <h1 class="h3 mb-2 text-gray-800">Ranks</h1>
 
-                        <!-- Content Column -->
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Color System -->
-                            <div class="row">
-                                <div class="col-lg-6 mb-4">
-                                    <a href="ranks.html#jrwhite" class="card bg-light text-gray-800 shadow">
-                                        <div class="card-body">
-                                            Jr. White
-                                            <div class="text-black-50 small">3 Months (30 Classes)</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <a href="ranks.html#srwhite" class="card bg-light border-left-warning text-gray-800">
-                                        <div class="card-body">
-                                            Sr. White
-                                            <div class="text-black-50 small">3 Months (30 Classes)</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <a href="ranks.html#jryellow" class="card bg-warning text-gray-800 shadow">
-                                        <div class="card-body">
-                                            Jr. Yellow
-                                            <div class="text-black-50 small">3 Months (30 Classes)</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <a href="ranks.html#sryellow" class="card bg-warning border-left-success text-gray-800 shadow">
-                                        <div class="card-body">
-                                            Sr. Yellow
-                                            <div class="text-black-50 small">3 Months (30 Classes)</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <a href="ranks.html#jrgreen" class="card bg-success text-white shadow">
-                                        <div class="card-body">
-                                            Jr. Green
-                                            <div class="text-white-50 small">3 Months (30 Classes)</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <a href="ranks.html#srgreen" class="card bg-success border-left-primary text-white shadow">
-                                        <div class="card-body">
-                                            Sr. Green
-                                            <div class="text-white-50 small">3 Months (30 Classes)</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <a href="ranks.html#jrblue" class="card bg-primary text-white shadow">
-                                        <div class="card-body">
-                                            Jr. Blue
-                                            <div class="text-white-50 small">3 Months (30 Classes)</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <a href="ranks.html#srblue" class="card bg-primary border-left-danger text-white shadow">
-                                        <div class="card-body">
-                                            Sr. Blue
-                                            <div class="text-white-50 small">3 Months (30 Classes)</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <a href="ranks.html#jrred" class="card bg-danger text-white shadow">
-                                        <div class="card-body">
-                                            Jr. Red
-                                            <div class="text-white-50 small">6 Months (60 classes)</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <a href="ranks.html#srred" class="card bg-danger border-left-dark text-white shadow">
-                                        <div class="card-body">
-                                            Sr. Red
-                                            <div class="text-white-50 small">6 Months (60 classes)</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <a href="ranks.html#tempblack" class="card bg-dark text-white shadow">
-                                        <div class="card-body">
-                                            Temp. Black
-                                            <div class="text-white-50 small">6 Months (60 classes)</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            
-
+                    
+                    <!-- Jr. White -->
+                    <div class="card shadow mb-4" id="jrwhite">
+                        <div class="card-header bg-light py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">
+                                <a href="#collapseJrWhite" class="d-block text-gray-800" data-toggle="collapse" role="button" aria-expanded="true"
+                                    aria-controls="collapseJrWhite">
+                                    Jr. White
+                                </a>
+                            </h6>
                         </div>
-
-                        <div class="col-lg-6 mb-4">
-                            <!-- Projects -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Project Estimates</h6>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="small font-weight-bold">Curriculum Planning<span
-                                            class="float-right">10%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 10%"
-                                            aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Class Planning<span
-                                            class="float-right">10%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 10%"
-                                            aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Instructor Website <span
-                                            class="float-right">20%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 20%"
-                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
+                        <div class="collapse show" id="collapseJrWhite">
+                            <div class="card-body">
+                                Jr. White content goes here.
+                                <p><b>Form:</b> Chon (10 Movements)</p>
+                                <p><b>Techniques:</b></p>
+                                <ul>
+                                    <li>movement 1</li>
+                                    <li>movement 2</li>
+                                    <li>movement 3</li>
+                                </ul>
+                                <p><b>Meaning:</b></p>
+                                <p>Paste meaning here...</p>
                             </div>
-
-                            <!-- Approach -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
-                                </div>
-                                <div class="card-body">
-                                    <p>Extensive use of Bootstrap 4 utility classes in order to reduce
-                                        CSS bloat and poor page performance. Custom CSS classes are used to create
-                                        custom components and custom utility classes.</p>
-                                    <p class="mb-0">Before working with this theme, you should become familiar with the
-                                        Bootstrap framework, especially the utility classes.</p>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
+
+                    <!-- Sr. White -->
+                    <div class="card shadow mb-4" id="srwhite">
+                        <div class="card-header bg-light border-left-warning py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">
+                                <a href="#collapseSrWhite" class="d-block text-gray-800" data-toggle="collapse" role="button" aria-expanded="true"
+                                    aria-controls="collapseSrWhite">
+                                    Sr. White
+                                </a>
+                            </h6>
+                        </div>
+                        <div class="collapse" id="collapseSrWhite">
+                            <div class="card-body">
+                                Sr. White content goes here.
+                                <p><b>Form:</b> Chon (10 Movements)</p>
+                                <p><b>Techniques:</b></p>
+                                <ul>
+                                    <li>movement 1</li>
+                                    <li>movement 2</li>
+                                    <li>movement 3</li>
+                                </ul>
+                                <p><b>Meaning:</b></p>
+                                <p>Paste meaning here...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jr. Yellow -->
+                    <div class="card shadow mb-4" id="jryellow">
+                        <div class="card-header bg-warning py-3">
+                            <h6 class="m-0 font-weight-bold text-dark">
+                                <a href="#collapseJrYellow" class="d-block text-gray-800" data-toggle="collapse" role="button" aria-expanded="true"
+                                    aria-controls="collapseJrYellow">
+                                    Jr. Yellow
+                                </a>
+                            </h6>
+                        </div>
+                        <div class="collapse" id="collapseJrYellow">
+                            <div class="card-body">
+                                Jr. Yellow content goes here.
+                                <p><b>Form:</b> Chon (10 Movements)</p>
+                                <p><b>Techniques:</b></p>
+                                <ul>
+                                    <li>movement 1</li>
+                                    <li>movement 2</li>
+                                    <li>movement 3</li>
+                                </ul>
+                                <p><b>Meaning:</b></p>
+                                <p>Paste meaning here...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sr. Yellow -->
+                    <div class="card shadow mb-4" id="sryellow">
+                        <div class="card-header bg-warning border-left-success py-3">
+                            <h6 class="m-0 font-weight-bold text-warning">
+                                <a href="#collapseSrYellow" class="d-block text-gray-800" data-toggle="collapse" role="button" aria-expanded="true"
+                                    aria-controls="collapseSrYellow">
+                                    Sr. Yellow
+                                </a>
+                            </h6>
+                        </div>
+                        <div class="collapse" id="collapseSrYellow">
+                            <div class="card-body">
+                                Sr. Yellow content goes here.
+                                <p><b>Form:</b> Chon (10 Movements)</p>
+                                <p><b>Techniques:</b></p>
+                                <ul>
+                                    <li>movement 1</li>
+                                    <li>movement 2</li>
+                                    <li>movement 3</li>
+                                </ul>
+                                <p><b>Meaning:</b></p>
+                                <p>Paste meaning here...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jr. Green -->
+                    <div class="card shadow mb-4" id="jrgreen">
+                        <div class="card-header bg-success py-3">
+                            <h6 class="m-0 font-weight-bold text-white">
+                                <a href="#collapseJrGreen" class="d-block text-white" data-toggle="collapse" role="button" aria-expanded="true"
+                                    aria-controls="collapseJrGreen">
+                                    Jr. Green
+                                </a>
+                            </h6>
+                        </div>
+                        <div class="collapse" id="collapseJrGreen">
+                            <div class="card-body">
+                                Jr. Green content goes here.
+                                <p><b>Form:</b> Chon (10 Movements)</p>
+                                <p><b>Techniques:</b></p>
+                                <ul>
+                                    <li>movement 1</li>
+                                    <li>movement 2</li>
+                                    <li>movement 3</li>
+                                </ul>
+                                <p><b>Meaning:</b></p>
+                                <p>Paste meaning here...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sr. Green -->
+                    <div class="card shadow mb-4" id="srgreen">
+                        <div class="card-header bg-success border-left-primary py-3">
+                            <h6 class="m-0 font-weight-bold text-white">
+                                <a href="#collapseSrGreen" class="d-block text-white" data-toggle="collapse" role="button" aria-expanded="true"
+                                    aria-controls="collapseSrGreen">
+                                    Sr. Green
+                                </a>
+                            </h6>
+                        </div>
+                        <div class="collapse" id="collapseSrGreen">
+                            <div class="card-body">
+                                Sr. Green content goes here.
+                                <p><b>Form:</b> Chon (10 Movements)</p>
+                                <p><b>Techniques:</b></p>
+                                <ul>
+                                    <li>movement 1</li>
+                                    <li>movement 2</li>
+                                    <li>movement 3</li>
+                                </ul>
+                                <p><b>Meaning:</b></p>
+                                <p>Paste meaning here...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jr. Blue -->
+                    <div class="card shadow mb-4" id="jrblue">
+                        <div class="card-header bg-primary py-3">
+                            <h6 class="m-0 font-weight-bold text-white">
+                                <a href="#collapseJrBlue" class="d-block text-white" data-toggle="collapse" role="button" aria-expanded="true"
+                                    aria-controls="collapseJrBlue">
+                                    Jr. Blue
+                                </a>
+                            </h6>
+                        </div>
+                        <div class="collapse" id="collapseJrBlue">
+                            <div class="card-body">
+                                Jr. Blue content goes here.
+                                <p><b>Form:</b> Chon (10 Movements)</p>
+                                <p><b>Techniques:</b></p>
+                                <ul>
+                                    <li>movement 1</li>
+                                    <li>movement 2</li>
+                                    <li>movement 3</li>
+                                </ul>
+                                <p><b>Meaning:</b></p>
+                                <p>Paste meaning here...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sr. Blue -->
+                    <div class="card shadow mb-4" id="srblue">
+                        <div class="card-header bg-primary border-left-danger py-3">
+                            <h6 class="m-0 font-weight-bold text-white">
+                                <a href="#collapseSrBlue" class="d-block text-white" data-toggle="collapse" role="button" aria-expanded="true"
+                                    aria-controls="collapseSrBlue">
+                                    Sr. Blue
+                                </a>
+                            </h6>
+                        </div>
+                        <div class="collapse" id="collapseSrBlue">
+                            <div class="card-body">
+                                Sr. Blue content goes here.
+                                <p><b>Form:</b> Chon (10 Movements)</p>
+                                <p><b>Techniques:</b></p>
+                                <ul>
+                                    <li>movement 1</li>
+                                    <li>movement 2</li>
+                                    <li>movement 3</li>
+                                </ul>
+                                <p><b>Meaning:</b></p>
+                                <p>Paste meaning here...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jr. Red -->
+                    <div class="card shadow mb-4" id="jrred">
+                        <div class="card-header bg-danger py-3">
+                            <h6 class="m-0 font-weight-bold text-white">
+                                <a href="#collapseJrRed" class="d-block text-white" data-toggle="collapse" role="button" aria-expanded="true"
+                                    aria-controls="collapseJrRed">
+                                    Jr. Red
+                                </a>
+                            </h6>
+                        </div>
+                        <div class="collapse" id="collapseJrRed">
+                            <div class="card-body">
+                                Jr. Red content goes here.
+                                <p><b>Form:</b> Chon (10 Movements)</p>
+                                <p><b>Techniques:</b></p>
+                                <ul>
+                                    <li>movement 1</li>
+                                    <li>movement 2</li>
+                                    <li>movement 3</li>
+                                </ul>
+                                <p><b>Meaning:</b></p>
+                                <p>Paste meaning here...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sr. Red -->
+                    <div class="card shadow mb-4" id="srred">
+                        <div class="card-header bg-danger border-left-dark py-3">
+                            <h6 class="m-0 font-weight-bold text-white">
+                                <a href="#collapseSrRed" class="d-block text-white" data-toggle="collapse" role="button" aria-expanded="true"
+                                    aria-controls="collapseSrRed">
+                                    Sr. Red
+                                </a>
+                            </h6>
+                        </div>
+                        <div class="collapse" id="collapseSrRed">
+                            <div class="card-body">
+                                Sr. Red content goes here.
+                                <p><b>Form:</b> Chon (10 Movements)</p>
+                                <p><b>Techniques:</b></p>
+                                <ul>
+                                    <li>movement 1</li>
+                                    <li>movement 2</li>
+                                    <li>movement 3</li>
+                                </ul>
+                                <p><b>Meaning:</b></p>
+                                <p>Paste meaning here...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Temp. Black Belt -->
+                    <div class="card shadow mb-4" id="tempblack">
+                        <div class="card-header bg-dark py-3">
+                            <h6 class="m-0 font-weight-bold text-white">
+                                <a href="#collapseTempBlack" class="d-block text-white" data-toggle="collapse" role="button" aria-expanded="true"
+                                    aria-controls="collapseTempBlack">
+                                    Temp. Black
+                                </a>
+                            </h6>
+                        </div>
+                        <div class="collapse" id="collapseTempBlack">
+                            <div class="card-body">
+                                Temp. Black Belt content goes here.
+                                <p><b>Form:</b> Chon (10 Movements)</p>
+                                <p><b>Techniques:</b></p>
+                                <ul>
+                                    <li>movement 1</li>
+                                    <li>movement 2</li>
+                                    <li>movement 3</li>
+                                </ul>
+                                <p><b>Meaning:</b></p>
+                                <p>Paste meaning here...</p>
+                            </div>
+                        </div>
+                    </div>
+
+
 
                 </div>
                 <!-- /.container-fluid -->
@@ -484,11 +625,11 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/datatables-demo.js"></script>
 
 </body>
 
